@@ -1290,67 +1290,6 @@ border: 2px solid #444;
         gap: 2px;
     }
 }
-/* ...existing code... */
-
-/* Бургер-меню */
-.burger {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1100;
-    margin-left: auto;
-}
-.burger span {
-    display: block;
-    height: 4px;
-    width: 100%;
-    background: #2c3e50;
-    margin: 5px 0;
-    border-radius: 2px;
-    transition: 0.3s;
-}
-
-/* Мобильная адаптация */
-@media (max-width: 600px) {
-    header {
-        position: static;
-    }
-    .burger {
-        display: flex;
-    }
-    nav {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: #fff;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        display: none;
-        flex-direction: column;
-        z-index: 1000;
-    }
-    nav.open {
-        display: flex;
-    }
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-    }
-    nav ul li {
-        margin: 0;
-        border-bottom: 1px solid #eee;
-        padding: 12px 0;
-        text-align: left;
-    }
-    header .container {
-        position: relative;
-    }
-}
 /* --- Бургер-меню и мобильная навигация --- */
 .burger {
     display: none;
@@ -1409,161 +1348,6 @@ border: 2px solid #444;
     }
     .hero {
         margin-top: 0;
-    }
-}
-/* --- Бургер-меню и мобильная навигация --- */
-.burger {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1100;
-    margin-left: auto;
-}
-.burger span {
-    display: block;
-    height: 4px;
-    width: 28px;
-    background: #fff;
-    margin: 5px 0;
-    border-radius: 2px;
-    transition: 0.3s;
-}
-.burger.active span:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
-}
-.burger.active span:nth-child(2) {
-    opacity: 0;
-}
-.burger.active span:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
-}
-
-@media (max-width: 600px) {
-    header {
-        background: #1e1e1e;
-    }
-    .burger {
-        display: flex;
-    }
-    nav {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: #1e1e1e;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-        flex-direction: column;
-        z-index: 1000;
-    }
-    nav.open {
-        display: flex;
-    }
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    nav ul li {
-        margin: 0;
-        border-bottom: 1px solid #333;
-        padding: 16px 0;
-        text-align: left;
-    }
-    nav ul li a {
-        color: #fff !important;
-        font-size: 1.1rem;
-        padding-left: 24px;
-    }
-    header .container {
-        position: relative;
-        flex-direction: row;
-        align-items: center;
-        padding: 10px 0;
-    }
-    .logo img {
-        max-height: 36px;
-    }
-    .hero {
-        padding: 60px 0 30px;
-        margin-top: 0;
-        text-align: center;
-    }
-    .hero h1 {
-        font-size: 1.2rem;
-        padding: 0 5px;
-    }
-    .hero p {
-        font-size: 1rem;
-        padding: 0 5px;
-    }
-    .features .container {
-        flex-direction: column;
-        gap: 12px;
-    }
-    .feature {
-        margin: 10px 0;
-        padding: 16px 10px;
-        min-width: unset;
-    }
-    .gallery {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
-    .item {
-        width: 100%;
-        min-width: 0;
-        height: auto;
-    }
-    .item img {
-        width: 100%;
-        height: auto;
-        max-height: 220px;
-        object-fit: cover;
-        border-radius: 8px;
-    }
-    .catalog h2 {
-        font-size: 1.1rem;
-        margin-bottom: 18px;
-    }
-    .cta {
-        padding: 30px 0;
-    }
-    .cta h2 {
-        font-size: 1.1rem;
-    }
-    .cta p {
-        font-size: 1rem;
-    }
-    .footer-content {
-        flex-direction: column;
-        gap: 0;
-        margin-bottom: 20px;
-    }
-    .footer-section {
-        min-width: unset;
-        margin-bottom: 18px;
-        padding: 0 5px;
-    }
-    .modal-content {
-        padding: 10px;
-        max-width: 98vw;
-    }
-    .modal-image {
-        max-height: 40vh;
-    }
-    .close {
-        top: 5px;
-        right: 10px;
-        font-size: 2rem;
     }
 }
 /* --- Улучшенный бургер и мобильное меню --- */
@@ -1998,5 +1782,72 @@ border: 2px solid #444;
     }
     .close {
         display: none !important;
+    }
+}
+/* --- Доработки мобильной главной страницы --- */
+@media (max-width: 600px) {
+    /* Кнопка "Посмотреть каталог" поменьше */
+    .hero .btn {
+        font-size: 0.95rem;
+        padding: 10px 0;
+        width: 90%;
+        max-width: 260px;
+        margin: 0 auto 18px auto;
+        display: block;
+    }
+
+    /* БОЛЬШОЙ отступ между hero и features */
+    .hero {
+        padding-bottom: 18px !important;
+        margin-bottom: 38px !important;
+    }
+
+    /* БОЛЬШОЙ отступ между features и "Наши работы" */
+    .features {
+        margin-bottom: 38px !important;
+    }
+
+    /* БОЛЬШОЙ отступ между "Наши работы" и галереей */
+    .catalog h2 {
+        margin-bottom: 18px !important;
+    }
+
+    /* Галерея: картинки крупнее, чуть более вытянутые, форма "карточки" */
+    .gallery {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 16px !important;
+    }
+    .item {
+        height: 120px !important;
+        border-radius: 14px !important;
+        box-shadow: 0 2px 10px rgba(52,152,219,0.13);
+        background: #232323;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .item img {
+        height: 100% !important;
+        width: 100% !important;
+        object-fit: cover !important;
+        border-radius: 14px !important;
+        box-shadow: 0 1px 4px rgba(52,152,219,0.10);
+    }
+
+    /* БОЛЬШОЙ отступ между галереей и .cta */
+    .catalog {
+        margin-bottom: 38px !important;
+    }
+
+    /* БОЛЬШОЙ отступ между .cta и footer */
+    .cta {
+        margin-bottom: 28px !important;
+    }
+
+    /* Уменьшить кнопку "Посмотреть" в галерее */
+    .view-btn {
+        font-size: 0.95rem;
+        padding: 7px 12px;
     }
 }

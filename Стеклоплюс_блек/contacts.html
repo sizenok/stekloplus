@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | Стекло+</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_api_ключ&lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+    <a href="index.html">
+        <img src="images/стекло без фона.png" alt="Стекло+">
+    </a>
+</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="wholesale.html">Оптовикам</a></li>
+                    <li><a href="delivery.html">Доставка</a></li>
+                    <li><a href="contacts.html" class="active">Контакты</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contacts-page">
+        <div class="container">
+            <h1>Наши контакты</h1>
+            <div class="contacts-content">
+                <div id="map" style="width: 100%; height: 400px;"></div>
+                <div class="contacts-overlay">
+                    <h3>Наши контакты</h3>
+                    <p><strong>Адрес:</strong><br>
+                    г. Красноярск, ул. Кутузова, 1 ст9</p>
+                    <p><strong>Телефон:</strong><br>
+                    +7 (391) 271-16-12</p>
+                    <p><strong>Электронная почта:</strong><br>
+                    steklo_plus2013@mail.ru</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Стекло+</h3>
+                    <p>Профессиональное производство стеклянных изделий и зеркал с 2008 года.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>г. Красноярск, ул. Кутузова, 1 ст9</p>
+                    <p>+7 (391) 271-16-12</p>
+                    <p>steklo_plus2013@mail.ru</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Часы работы</h3>
+                    <p>Пн-Пт: 9:00 - 18:00</p>
+                    <p>Сб: 10:00 - 15:00</p>
+                    <p>Вс: выходной</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Стекло+. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        ymaps.ready(init);
+        
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                center: [56.010563, 92.852572], // Координаты ул. Кутузова, 1
+                zoom: 16
+            });
+            
+            var myPlacemark = new ymaps.Placemark([56.010563, 92.852572], {
+                hintContent: 'Стекло+',
+                balloonContent: 'ул. Кутузова, 1, Красноярск'
+            });
+            
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
+</body>
+</html>

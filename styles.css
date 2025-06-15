@@ -1290,3 +1290,64 @@ border: 2px solid #444;
         gap: 2px;
     }
 }
+/* ...existing code... */
+
+/* Бургер-меню */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+    margin-left: auto;
+}
+.burger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #2c3e50;
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 600px) {
+    header {
+        position: static;
+    }
+    .burger {
+        display: flex;
+    }
+    nav {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        display: none;
+        flex-direction: column;
+        z-index: 1000;
+    }
+    nav.open {
+        display: flex;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    nav ul li {
+        margin: 0;
+        border-bottom: 1px solid #eee;
+        padding: 12px 0;
+        text-align: left;
+    }
+    header .container {
+        position: relative;
+    }
+}

@@ -1351,3 +1351,63 @@ border: 2px solid #444;
         position: relative;
     }
 }
+/* --- Бургер-меню и мобильная навигация --- */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+    margin-left: auto;
+}
+.burger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #3498db;
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+@media (max-width: 600px) {
+    .burger {
+        display: flex;
+    }
+    nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #1e1e1e;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+        flex-direction: column;
+        z-index: 1000;
+    }
+    nav.open {
+        display: flex;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    nav ul li {
+        margin: 0;
+        border-bottom: 1px solid #333;
+        padding: 12px 0;
+        text-align: left;
+    }
+    header .container {
+        position: relative;
+    }
+    .hero {
+        margin-top: 0;
+    }
+}

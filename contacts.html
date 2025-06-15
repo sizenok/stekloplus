@@ -16,6 +16,11 @@
         <img src="images/стекло без фона.png" alt="Стекло+">
     </a>
 </div>
+<button class="burger" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
             <nav>
                 <ul>
                     <li><a href="index.html">Главная</a></li>
@@ -89,6 +94,21 @@
             
             myMap.geoObjects.add(myPlacemark);
         }
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('nav');
+    if (burger && nav) {
+        burger.addEventListener('click', function() {
+            nav.classList.toggle('open');
+            burger.classList.toggle('active');
+        });
+
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('open');
+                burger.classList.remove('active');
+            });
+        });
+    }
     </script>
 </body>
 </html>

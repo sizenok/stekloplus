@@ -16,7 +16,7 @@
         <img src="images/стекло без фона.png" alt="Стекло+">
     </a>
 </div>
-        <button class="burger" aria-label="Открыть меню">
+<button class="burger" aria-label="Открыть меню">
             <span></span>
             <span></span>
             <span></span>
@@ -178,13 +178,18 @@
                 });
             });
         });
-                const burger = document.querySelector('.burger');
+        
+    
+    // ...existing code...
+
+    // Бургер-меню
+        const burger = document.querySelector('.burger');
         const nav = document.querySelector('nav');
         burger.addEventListener('click', function() {
             nav.classList.toggle('open');
             burger.classList.toggle('active');
         });
-    
+
         // Закрытие меню при клике по пункту
         document.querySelectorAll('nav ul li a').forEach(link => {
             link.addEventListener('click', () => {
@@ -192,6 +197,15 @@
                 burger.classList.remove('active');
             });
         });
+
+        // ...existing code...
+        window.addEventListener('click', function(e) {
+    const modal = document.querySelector('.modal');
+    const modalContent = document.querySelector('.modal-content');
+    if (modal && e.target === modal) {
+        modal.style.display = 'none';
+    }
+});
     </script>
 </body>
 </html>

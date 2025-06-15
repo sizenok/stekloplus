@@ -356,6 +356,22 @@
                 modalMainImg.src = this.src;
             });
         });
+        
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('nav');
+    if (burger && nav) {
+        burger.addEventListener('click', function() {
+            nav.classList.toggle('open');
+            burger.classList.toggle('active');
+        });
+
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('open');
+                burger.classList.remove('active');
+            });
+        });
+    }
     </script>
 </body>
 </html>

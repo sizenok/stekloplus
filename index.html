@@ -198,12 +198,26 @@
             });
         });
 
-        // ...existing code...
-       const modal = document.querySelector('.modal');
-const modalContent = document.querySelector('.modal-content');
+        // Модальное окно для галереи
+const items = document.querySelectorAll('.item');
+const modal = document.querySelector('.modal');
+const modalImg = document.querySelector('.modal-image');
+const modalTitle = document.querySelector('.modal-title');
+const closeBtn = document.querySelector('.close');
+
+items.forEach(item => {
+    item.addEventListener('click', function() {
+        const imgSrc = this.querySelector('img').src;
+        const title = this.querySelector('h3').textContent;
+        modalImg.src = imgSrc;
+        modalTitle.textContent = title;
+        modal.style.display = 'flex';
+    });
+});
+
+// Закрытие модального окна по клику вне изображения и заголовка
 if (modal) {
     modal.addEventListener('click', function(e) {
-        // Если клик был вне изображения и вне заголовка
         if (
             !e.target.classList.contains('modal-image') &&
             !e.target.classList.contains('modal-title')

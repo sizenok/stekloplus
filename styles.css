@@ -1158,3 +1158,221 @@ border: 2px solid #444;
     width: auto;
     display: block;
 }
+/* ...existing code... */
+
+/* Базовые стили для мобильных устройств */
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Адаптивное меню */
+header .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    max-width: 140px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+}
+
+/* Галерея */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.gallery .item {
+    flex: 1 1 22%;
+    min-width: 220px;
+    position: relative;
+}
+
+.gallery .item img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 12px;
+    border-radius: 0 0 8px 8px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery .item:hover .overlay {
+    opacity: 1;
+}
+
+/* Фичи */
+.features {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin: 40px 0;
+}
+
+.feature {
+    flex: 1 1 30%;
+    background: #f7f7f7;
+    padding: 24px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.7);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 60vh;
+    margin-bottom: 16px;
+}
+
+.close {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Кнопки */
+.btn, .view-btn {
+    background: #0078d7;
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background 0.2s;
+}
+
+.btn:hover, .view-btn:hover {
+    background: #005fa3;
+}
+
+/* Footer */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1 1 30%;
+    min-width: 180px;
+}
+
+@media (max-width: 900px) {
+    .features, .footer-content {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .feature, .footer-section {
+        min-width: unset;
+    }
+    .gallery {
+        gap: 16px;
+    }
+    .gallery .item {
+        flex: 1 1 45%;
+        min-width: 160px;
+    }
+}
+
+@media (max-width: 600px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
+    .gallery {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .gallery .item {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+    .features {
+        margin: 24px 0;
+    }
+    .feature {
+        padding: 16px;
+    }
+    .cta .container {
+        padding: 16px 0;
+    }
+    .modal-content {
+        padding: 12px;
+    }
+    .close {
+        top: 8px;
+        right: 16px;
+    }
+}
+
+/* ...existing code... */

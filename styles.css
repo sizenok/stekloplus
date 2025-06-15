@@ -1842,7 +1842,7 @@ border: 2px solid #444;
 
     /* БОЛЬШОЙ отступ между .cta и footer */
     .cta {
-        margin-bottom: 28px !important;
+        margin-bottom: 60px !important;
     }
 
     /* Уменьшить кнопку "Посмотреть" в галерее */

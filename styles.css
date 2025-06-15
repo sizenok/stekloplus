@@ -839,12 +839,6 @@ footer {
 .delivery-content img:hover {
     filter: grayscale(5%);
 }
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
 
 body {
     line-height: 1.6;
@@ -1842,12 +1836,152 @@ border: 2px solid #444;
 
     /* БОЛЬШОЙ отступ между .cta и footer */
     .cta {
-        margin-bottom: 60px !important;
+        margin-bottom: 28px !important;
     }
 
     /* Уменьшить кнопку "Посмотреть" в галерее */
     .view-btn {
         font-size: 0.95rem;
         padding: 7px 12px;
+    }
+}
+@media (max-width: 600px) {
+    /* Скрыть подзаголовок hero */
+    .hero-subtitle, .hero p {
+        display: none !important;
+    }
+
+    /* Кнопка "Посмотреть каталог" поменьше */
+    .hero .btn {
+        font-size: 0.95rem;
+        padding: 10px 0;
+        width: 90%;
+        max-width: 260px;
+        margin: 0 auto 18px auto;
+        display: block;
+    }
+
+    /* БОЛЬШОЙ отступ между hero и features */
+    .hero {
+        padding-bottom: 18px !important;
+        margin-bottom: 38px !important;
+    }
+
+    /* Компактные фичи: две в ряд, одна под ними */
+    .features .container {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 10px;
+        justify-items: center;
+        align-items: stretch;
+    }
+    .feature {
+        margin: 0 !important;
+        padding: 10px 6px !important;
+        min-width: 0 !important;
+        font-size: 0.95rem !important;
+        border-radius: 10px !important;
+        box-shadow: 0 1px 4px rgba(52,152,219,0.08);
+    }
+    .feature .icon {
+        font-size: 1.5rem !important;
+        margin-bottom: 6px !important;
+    }
+    .feature:nth-child(3) {
+        grid-column: 1 / span 2;
+        width: 80%;
+        margin: 0 auto !important;
+    }
+
+    /* БОЛЬШОЙ отступ между features и "Наши работы" */
+    .features {
+        margin-bottom: 38px !important;
+    }
+
+    /* "Наши работы" — крупнее и ярче */
+    .catalog h2 {
+        font-size: 1.35rem !important;
+        margin-bottom: 18px !important;
+        color: #fff !important;
+        background: linear-gradient(90deg, #3498db 0%, #1e1e1e 100%);
+        padding: 10px 0 10px 12px;
+        border-radius: 8px;
+        letter-spacing: 1px;
+        text-align: left;
+        box-shadow: 0 2px 8px rgba(52,152,219,0.10);
+    }
+
+    /* Галерея: картинки крупнее, чуть более вытянутые, форма "карточки" */
+    .gallery {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 16px !important;
+    }
+    .item {
+        height: 120px !important;
+        border-radius: 14px !important;
+        box-shadow: 0 2px 10px rgba(52,152,219,0.13);
+        background: #232323;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .item img {
+        height: 100% !important;
+        width: 100% !important;
+        object-fit: cover !important;
+        border-radius: 14px !important;
+        box-shadow: 0 1px 4px rgba(52,152,219,0.10);
+    }
+
+    /* БОЛЬШОЙ отступ между галереей и .cta */
+    .catalog {
+        margin-bottom: 38px !important;
+    }
+
+    /* БОЛЬШОЙ отступ между .cta и footer */
+    .cta {
+        margin-bottom: 28px !important;
+    }
+
+    /* Уменьшить кнопку "Посмотреть" в галерее */
+    .view-btn {
+        font-size: 0.95rem;
+        padding: 7px 12px;
+    }
+
+    /* Модальное окно: большая картинка, аккуратная подпись */
+    .modal-content {
+        max-width: 96vw !important;
+        max-height: 80vh !important;
+        padding: 8px !important;
+        border-radius: 12px !important;
+        background: #181818 !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .modal-image {
+        max-width: 100vw !important;
+        max-height: 55vh !important;
+        width: auto !important;
+        height: auto !important;
+        border-radius: 10px !important;
+        margin-bottom: 10px !important;
+        display: block;
+    }
+    .modal-title {
+        font-size: 1.1rem !important;
+        color: #fff !important;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .close {
+        font-size: 2rem !important;
+        top: 8px !important;
+        right: 16px !important;
     }
 }

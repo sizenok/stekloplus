@@ -1766,3 +1766,136 @@ border: 2px solid #444;
         gap: 2px;
     }
 }
+/* --- Декор для мобильных устройств --- */
+@media (max-width: 600px) {
+    header .container {
+        padding: 6px 0;
+    }
+    .logo {
+        font-size: 24px;
+        margin-bottom: 0;
+    }
+    .logo img {
+        max-height: 32px;
+    }
+    .burger {
+        width: 48px;
+        height: 48px;
+    }
+    .burger span {
+        width: 32px;
+        height: 4px;
+        margin: 6px 0;
+        background: #fff;
+    }
+    nav ul li a {
+        font-size: 1.15rem;
+        padding: 18px 18px;
+        letter-spacing: 0.5px;
+    }
+    .hero {
+        padding: 48px 0 24px;
+        margin-top: 0;
+        border-radius: 0 0 18px 18px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    }
+    .hero h1 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 18px;
+    }
+    .btn, .view-btn {
+        font-size: 1.1rem;
+        padding: 14px 0;
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        box-shadow: 0 2px 8px rgba(52,152,219,0.15);
+    }
+    .features {
+        padding: 24px 0;
+    }
+    .feature {
+        margin: 10px 0;
+        padding: 18px 10px;
+        border-radius: 14px;
+        box-shadow: 0 2px 8px rgba(52,152,219,0.08);
+        font-size: 1rem;
+    }
+    .feature .icon {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+    }
+    .gallery {
+        gap: 18px;
+    }
+    .item {
+        border-radius: 14px;
+        box-shadow: 0 2px 8px rgba(52,152,219,0.10);
+        height: 180px;
+    }
+    .item img {
+        border-radius: 14px;
+    }
+    .overlay {
+        padding: 14px;
+        border-radius: 0 0 14px 14px;
+        font-size: 1rem;
+    }
+    .catalog h2 {
+        font-size: 1.1rem;
+        margin-bottom: 14px;
+    }
+    .cta {
+        padding: 24px 0;
+        border-radius: 14px;
+        margin: 12px 0;
+    }
+    .cta h2 {
+        font-size: 1.1rem;
+    }
+    .cta p {
+        font-size: 1rem;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .footer-section {
+        min-width: unset;
+        margin-bottom: 12px;
+        padding: 0 5px;
+        text-align: center;
+    }
+    .copyright {
+        font-size: 0.95rem;
+        padding-top: 10px;
+    }
+    .modal-content {
+        padding: 8px;
+        max-width: 98vw;
+        border-radius: 14px;
+    }
+    .modal-image {
+        max-height: 40vh;
+        border-radius: 10px;
+    }
+    .close {
+        top: 5px;
+        right: 10px;
+        font-size: 2rem;
+    }
+    /* Плавное появление секций */
+    section, .feature, .item, .catalog-item, .service-card {
+        animation: fadeInMobile 0.7s;
+    }
+    @keyframes fadeInMobile {
+        from { opacity: 0; transform: translateY(20px);}
+        to { opacity: 1; transform: translateY(0);}
+    }
+}

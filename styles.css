@@ -2451,3 +2451,14 @@ section, .feature, .item, .catalog-item, .service-card {
         width: 100vw;
     }
 }
+.product-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}

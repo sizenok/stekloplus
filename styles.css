@@ -2339,3 +2339,15 @@ section, .feature, .item, .catalog-item, .service-card {
     object-fit: cover !important;
     border-radius: 12px !important;
 }
+@media (max-width: 600px) {
+    .item-image {
+        height: 220px !important;
+        min-height: 180px !important;
+        max-height: 260px !important;
+    }
+    .item-image img {
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 12px !important;
+    }
+}

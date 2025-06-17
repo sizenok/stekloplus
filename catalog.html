@@ -332,16 +332,19 @@
                 `;
                 
                 productModal.style.display = 'flex';
+                document.body.classList.add('modal-open');
             });
         });
 
         modalClose.addEventListener('click', function() {
             productModal.style.display = 'none';
+            document.body.classList.remove('modal-open');
         });
 
         window.addEventListener('click', function(e) {
             if (e.target === productModal) {
                 productModal.style.display = 'none';
+                document.body.classList.remove('modal-open');
             }
         });
 

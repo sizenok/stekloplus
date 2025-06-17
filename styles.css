@@ -2135,3 +2135,35 @@ section, .feature, .item, .catalog-item, .service-card {
     from { opacity: 0; transform: translateY(20px);}
     to { opacity: 1; transform: translateY(0);}
 }
+@media (max-width: 600px) {
+    .catalog h2 {
+        font-size: 1.5rem !important;
+        margin-bottom: 22px !important;
+        color: #fff !important;
+        background: rgba(30,30,30,0.85);
+        border-radius: 18px;
+        letter-spacing: 1.5px;
+        text-align: center;
+        box-shadow: 0 4px 24px rgba(52,152,219,0.18);
+        border: 2px solid transparent;
+        background-clip: padding-box;
+        position: relative;
+        z-index: 1;
+        padding: 18px 0 18px 0;
+        /* Градиентная рамка через псевдоэлемент */
+    }
+    .catalog h2::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border-radius: 18px;
+        padding: 2px;
+        background: linear-gradient(90deg, #3498db 0%, #1e1e1e 100%);
+        -webkit-mask:
+            linear-gradient(#fff 0 0) content-box, 
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+    }
+}

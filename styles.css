@@ -2327,3 +2327,6 @@ section, .feature, .item, .catalog-item, .service-card {
     height: 100%;
     min-height: 1px;
 }
+.catalog-item {
+    min-height: 100%;
+}

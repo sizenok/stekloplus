@@ -2284,3 +2284,18 @@ section, .feature, .item, .catalog-item, .service-card {
         display: block;
     }
 }
+/* Выравнивание карточек услуг и кнопок "Подробнее" */
+.services-grid {
+    align-items: stretch;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.service-card .btn {
+    margin-top: auto;
+}

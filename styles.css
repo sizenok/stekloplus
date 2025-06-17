@@ -2351,3 +2351,86 @@ section, .feature, .item, .catalog-item, .service-card {
         border-radius: 12px !important;
     }
 }
+/* Модальное окно товара: все заголовки и важные надписи белые */
+.product-modal .modal-content,
+.product-modal .modal-content h2,
+.product-modal .modal-content h4,
+.product-modal .modal-content .price,
+.product-modal .modal-content .specs strong,
+.product-modal .modal-content .price-rating,
+.product-modal .modal-content .rating {
+    color: #fff !important;
+}
+
+.product-modal .modal-content {
+    background: #181818 !important;
+    border: 1px solid #444 !important;
+}
+
+/* Белый цвет для характеристик */
+.product-modal .modal-content .specs li {
+    color: #eee !important;
+    border-bottom: 1px dashed #333;
+}
+@media (max-width: 600px) {
+    .product-modal .modal-content {
+        flex-direction: column !important;
+        padding: 10px !important;
+        max-width: 98vw !important;
+        min-width: 0 !important;
+        border-radius: 12px !important;
+        overflow: auto !important;
+    }
+    .modal-left, .modal-right {
+        padding: 10px !important;
+        border: none !important;
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+    .main-image {
+        height: 180px !important;
+        margin-bottom: 12px !important;
+        border-radius: 8px !important;
+    }
+    .main-image img {
+        max-height: 180px !important;
+        border-radius: 8px !important;
+    }
+    .modal-right h2 {
+        font-size: 1.1rem !important;
+        margin-bottom: 10px !important;
+    }
+    .price-rating {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 6px !important;
+        margin-bottom: 10px !important;
+    }
+    .modal-right .price {
+        font-size: 1.1rem !important;
+    }
+    .modal-right .rating {
+        font-size: 1rem !important;
+    }
+    .description, .specs {
+        font-size: 0.95rem !important;
+        margin-bottom: 12px !important;
+    }
+    .specs h4 {
+        font-size: 1rem !important;
+        margin-bottom: 8px !important;
+    }
+    .specs li {
+        font-size: 0.95rem !important;
+        padding-bottom: 6px !important;
+    }
+    .actions {
+        flex-direction: column !important;
+        gap: 8px !important;
+    }
+    .btn.primary, .btn.secondary {
+        width: 100% !important;
+        font-size: 1rem !important;
+        padding: 12px 0 !important;
+    }
+}

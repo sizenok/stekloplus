@@ -11,15 +11,15 @@
     <header>
         <div class="container">
             <div class="logo">
-    <a href="index.html">
-        <img src="images/стекло без фона.png" alt="Стекло+">
-    </a>
-</div>
-<button class="burger" aria-label="Открыть меню">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+                <a href="index.html">
+                    <img src="images/стекло без фона.png" alt="Стекло+">
+                </a>
+            </div>
+            <button class="burger" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav>
                 <ul>
                     <li><a href="index.html">Главная</a></li>
@@ -72,10 +72,9 @@
                             <span class="price">4 500 ₽</span>
                             <span class="rating">★★★★★</span>
                         </div>
-                        <button class="btn">Подробнее</button>
+                        <button class="btn" type="button">Подробнее</button>
                     </div>
                 </div>
-
                 <div class="catalog-item" data-category="mirrors" data-price="3200" data-popularity="4">
                     <div class="item-image">
                         <img src="images/1_1.jpg" alt="Круглое зеркало в деревянной раме">
@@ -87,10 +86,9 @@
                             <span class="price">3 200 ₽</span>
                             <span class="rating">★★★★☆</span>
                         </div>
-                        <button class="btn">Подробнее</button>
+                        <button class="btn" type="button">Подробнее</button>
                     </div>
                 </div>
-
                 <!-- Стеклянные изделия -->
                 <div class="catalog-item" data-category="glass" data-price="8900" data-popularity="4">
                     <div class="item-image">
@@ -104,10 +102,9 @@
                             <span class="price">8 900 ₽</span>
                             <span class="rating">★★★★★</span>
                         </div>
-                        <button class="btn">Подробнее</button>
+                        <button class="btn" type="button">Подробнее</button>
                     </div>
                 </div>
-
                 <div class="catalog-item" data-category="glass" data-price="12500" data-popularity="3">
                     <div class="item-image">
                         <img src="images/1_1.jpg" alt="Стеклянные полки">
@@ -119,10 +116,9 @@
                             <span class="price">12 500 ₽</span>
                             <span class="rating">★★★★☆</span>
                         </div>
-                        <button class="btn">Подробнее</button>
+                        <button class="btn" type="button">Подробнее</button>
                     </div>
                 </div>
-
                 <!-- Душевые кабины -->
                 <div class="catalog-item" data-category="shower" data-price="32400" data-popularity="5">
                     <div class="item-image">
@@ -136,10 +132,9 @@
                             <span class="price">32 400 ₽</span>
                             <span class="rating">★★★★★</span>
                         </div>
-                        <button class="btn">Подробнее</button>
+                        <button class="btn" type="button">Подробнее</button>
                     </div>
                 </div>
-
                 <div class="catalog-item" data-category="shower" data-price="28700" data-popularity="4">
                     <div class="item-image">
                         <img src="images/1_1.jpg" alt="Душевой экран">
@@ -151,10 +146,9 @@
                             <span class="price">28 700 ₽</span>
                             <span class="rating">★★★★☆</span>
                         </div>
-                        <button class="btn">Подробнее</button>
+                        <button class="btn" type="button">Подробнее</button>
                     </div>
                 </div>
-
                 <!-- Перегородки -->
                 <div class="catalog-item" data-category="partitions" data-price="45600" data-popularity="3">
                     <div class="item-image">
@@ -167,10 +161,9 @@
                             <span class="price">45 600 ₽</span>
                             <span class="rating">★★★★★</span>
                         </div>
-                        <button class="btn">Подробнее</button>
+                        <button class="btn" type="button">Подробнее</button>
                     </div>
                 </div>
-
                 <div class="catalog-item" data-category="partitions" data-price="38900" data-popularity="4">
                     <div class="item-image">
                         <img src="images/1_1.jpg" alt="Стеклянная дверь">
@@ -183,7 +176,7 @@
                             <span class="price">38 900 ₽</span>
                             <span class="rating">★★★★☆</span>
                         </div>
-                        <button class="btn">Подробнее</button>
+                        <button class="btn" type="button">Подробнее</button>
                     </div>
                 </div>
             </div>
@@ -199,7 +192,8 @@
         </div>
     </section>
 
-    <section class="product-modal">
+    <!-- Модальное окно товара -->
+    <section class="product-modal" style="display:none;">
         <div class="modal-content">
             <span class="close">&times;</span>
             <div class="modal-left">
@@ -222,9 +216,7 @@
                 <p class="description" id="modal-description"></p>
                 <div class="specs">
                     <h4>Характеристики:</h4>
-                    <ul id="modal-specs">
-                        <!-- Спецификации будут добавлены через JS -->
-                    </ul>
+                    <ul id="modal-specs"></ul>
                 </div>
                 <div class="actions">
                     <button class="btn primary">Заказать</button>
@@ -260,7 +252,7 @@
         </div>
     </footer>
 
-    <script>
+   <script>
         // Фильтрация каталога
         const categoryFilter = document.getElementById('category');
         const sortFilter = document.getElementById('sort');
@@ -361,39 +353,6 @@
                 modalMainImg.src = this.src;
             });
         });
-        
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('nav');
-    if (burger && nav) {
-        burger.addEventListener('click', function() {
-            nav.classList.toggle('open');
-            burger.classList.toggle('active');
-        });
-
-        document.querySelectorAll('nav ul li a').forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('open');
-                burger.classList.remove('active');
-            });
-        });
-    }
-    document.addEventListener('click', function(e) {
-        const modal = document.querySelector('.product-modal');
-        const modalContent = document.querySelector('.product-modal .modal-content');
-        if (modal && modal.style.display === 'flex') {
-            if (modalContent && !modalContent.contains(e.target)) {
-                modal.style.display = 'none';
-                document.body.classList.remove('modal-open');
-            }
-        }
-    });
-    // Когда открываете модалку:
-    modal.style.display = 'flex';
-    document.body.classList.add('modal-open');
-
-    // Когда закрываете модалку (по крестику или по клику вне карточки):
-    modal.style.display = 'none';
-    document.body.classList.remove('modal-open');
     </script>
 </body>
 </html>

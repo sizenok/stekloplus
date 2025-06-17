@@ -2140,65 +2140,6 @@ section, .feature, .item, .catalog-item, .service-card {
     /* Можно добавить легкую тень для читаемости */
     text-shadow: 0 2px 12px #3498db77, 0 1px 4px #000;
 }
-@media (max-width: 600px) {
-    .catalog h2 {
-    color: #fff !important;
-    text-align: center !important;
-    font-size: 2rem;
-    margin-bottom: 40px;
-    text-shadow: 0 4px 24px #3498db99, 0 1px 4px #000;
-    font-weight: 700;
-    letter-spacing: 1px;
-    background: none !important;
-    border: none !important;
-    padding: 0 !important;
-    border-radius: 0 !important;
-    position: relative;
-    z-index: 1;
-}
-
-@media (max-width: 600px) {
-    .catalog h2 {
-        font-size: 1.35rem !important;
-        margin-bottom: 18px !important;
-        margin-top: 10px !important;
-        padding: 0 !important;
-        text-align: center !important;
-        text-shadow: 0 2px 16px #3498dbcc, 0 1px 4px #000;
-        background: none !important;
-        border: none !important;
-        border-radius: 0 !important;
-    }
-    .gallery {
-        grid-template-columns: 1fr 1fr !important;
-        gap: 16px !important;
-    }
-    .item {
-        height: 110px !important;
-    }
-}
-@media (max-width: 600px) {
-    .cta {
-        background: none !important;
-        box-shadow: none !important;
-        border-radius: 0 !important;
-        padding: 40px 0 30px 0 !important;
-        margin: 0 !important;
-    }
-    .cta h2, .cta p {
-        color: #fff !important;
-        text-shadow: none !important;
-    }
-}
-@media (max-width: 600px) {
-    .catalog h2 {
-        background: none !important;
-        border: none !important;
-        border-radius: 0 !important;
-        box-shadow: none !important;
-        padding: 0 !important;
-    }
-}
 /* --- Синие тени для заголовков на всех страницах --- */
 .services-page h1,
 .wholesale-page h1,

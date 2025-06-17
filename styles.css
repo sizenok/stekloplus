@@ -2767,3 +2767,6 @@ body.modal-open {
         border-radius: 10px !important;
     }
 }
+.product-modal {
+    display: none !important;
+}

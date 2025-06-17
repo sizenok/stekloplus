@@ -2297,5 +2297,5 @@ section, .feature, .item, .catalog-item, .service-card {
 }
 
 .service-card .btn {
-    margin-top: auto;
+    margin-top: auto !important;
 }

@@ -2278,7 +2278,7 @@ section, .feature, .item, .catalog-item, .service-card {
 }
 @media (max-width: 600px) {
     .cta .btn {
-        font-size: 1rem !important;
+        font-size: 0.95rem !important;
         padding: 13px 0 !important;
         min-width: 180px;
         max-width: 90vw;

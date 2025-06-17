@@ -2299,3 +2299,20 @@ section, .feature, .item, .catalog-item, .service-card {
 .service-card .btn {
     margin-top: auto !important;
 }
+.catalog-grid {
+    align-items: stretch;
+}
+
+.catalog-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.catalog-item .btn,
+.catalog-item .view-btn {
+    margin-top: auto !important;
+    width: 100%;
+    box-sizing: border-box;
+}

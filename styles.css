@@ -2328,3 +2328,14 @@ section, .feature, .item, .catalog-item, .service-card {
     width: 100%;
     box-sizing: border-box;
 }
+/* Сделать картинки в каталоге крупнее на всех устройствах */
+.item-image {
+    height: 300px !important;
+    min-height: 220px !important;
+    max-height: 340px !important;
+}
+.item-image img {
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 12px !important;
+}

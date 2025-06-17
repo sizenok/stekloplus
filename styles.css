@@ -2199,3 +2199,89 @@ section, .feature, .item, .catalog-item, .service-card {
         padding: 0 !important;
     }
 }
+/* --- Синие тени для заголовков на всех страницах --- */
+.services-page h1,
+.wholesale-page h1,
+.delivery-page h1,
+.contacts-page h1,
+.catalog-page h1 {
+    color: #fff !important;
+    text-align: center !important;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-shadow: 0 4px 24px #3498db99, 0 1px 4px #000;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Белый цвет для названий услуг --- */
+.services-grid .service-card h3 {
+    color: #fff !important;
+    text-shadow: 0 2px 8px #3498db55, 0 1px 2px #000;
+}
+
+/* --- Отступы для плашек на страницах оптовикам и доставка --- */
+.wholesale-content {
+    margin-top: 40px !important;
+}
+
+.delivery-content {
+    margin-top: 40px !important;
+}
+
+/* --- Центрирование и тени для заголовка "Доставка" --- */
+.delivery-page h1 {
+    text-align: center !important;
+    margin-bottom: 40px !important;
+    text-shadow: 0 4px 24px #3498db99, 0 1px 4px #000;
+}
+
+/* --- Центрирование и тени для заголовка "Наши контакты" --- */
+.contacts-page h1 {
+    text-align: center !important;
+    margin-bottom: 40px !important;
+    text-shadow: 0 4px 24px #3498db99, 0 1px 4px #000;
+}
+
+/* --- Каталог: белый заголовок с синей тенью --- */
+.catalog-page h1 {
+    color: #fff !important;
+    text-align: center !important;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-shadow: 0 4px 24px #3498db99, 0 1px 4px #000;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Мобильная версия: крупные картинки в каталоге --- */
+@media (max-width: 600px) {
+    .catalog-grid {
+        grid-template-columns: 1fr !important;
+        gap: 22px !important;
+    }
+    .catalog-item .item-image,
+    .item-image {
+        height: 220px !important;
+        min-height: 180px !important;
+        max-height: 260px !important;
+    }
+    .catalog-item .item-image img,
+    .item-image img {
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 12px !important;
+    }
+}

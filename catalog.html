@@ -377,6 +377,23 @@
             });
         });
     }
+    document.addEventListener('click', function(e) {
+        const modal = document.querySelector('.product-modal');
+        const modalContent = document.querySelector('.product-modal .modal-content');
+        if (modal && modal.style.display === 'flex') {
+            if (modalContent && !modalContent.contains(e.target)) {
+                modal.style.display = 'none';
+                document.body.classList.remove('modal-open');
+            }
+        }
+    });
+    // Когда открываете модалку:
+    modal.style.display = 'flex';
+    document.body.classList.add('modal-open');
+
+    // Когда закрываете модалку (по крестику или по клику вне карточки):
+    modal.style.display = 'none';
+    document.body.classList.remove('modal-open');
     </script>
 </body>
 </html>

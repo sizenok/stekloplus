@@ -2226,3 +2226,53 @@ section, .feature, .item, .catalog-item, .service-card {
         border-radius: 12px !important;
     }
 }
+@media (max-width: 600px) {
+    .catalog h2 {
+        font-size: 1.35rem !important;
+        margin-bottom: 18px !important;
+        color: #fff !important;
+        background: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        text-align: center !important;
+        letter-spacing: 1px;
+        text-shadow: 0 2px 16px #3498dbcc, 0 1px 4px #000;
+    }
+}
+@media (max-width: 600px) {
+    .cta {
+        padding: 24px 0 !important;
+        background: none !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+    }
+    .cta h2 {
+        font-size: 1.1rem;
+        background: none !important;
+        border-radius: 0 !important;
+        color: #fff !important;
+        text-align: center !important;
+        text-shadow: 0 2px 16px #3498dbcc, 0 1px 4px #000;
+        margin-bottom: 14px;
+    }
+    .cta p {
+        font-size: 1rem;
+        color: #fff !important;
+        background: none !important;
+        text-align: center !important;
+        margin-bottom: 18px;
+    }
+    .cta .btn {
+        background: #3498db !important;
+        color: #fff !important;
+        border-radius: 6px !important;
+        box-shadow: none !important;
+        width: auto !important;
+        max-width: 100%;
+        margin: 0 auto;
+        display: inline-block;
+    }
+}

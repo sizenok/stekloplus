@@ -2316,3 +2316,14 @@ section, .feature, .item, .catalog-item, .service-card {
     width: 100%;
     box-sizing: border-box;
 }
+.catalog-grid {
+    align-items: stretch;
+    height: 100%;
+    min-height: 1px;
+}
+
+.catalog-page,
+.catalog {
+    height: 100%;
+    min-height: 1px;
+}

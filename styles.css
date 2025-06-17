@@ -2266,3 +2266,21 @@ section, .feature, .item, .catalog-item, .service-card {
         margin-bottom: 18px;
     }
 }
+.cta .btn {
+    font-size: 1.15rem;
+    padding: 18px 48px;
+    border-radius: 32px;
+    min-width: 220px;
+}
+@media (max-width: 600px) {
+    .cta .btn {
+        width: 70%;
+        min-width: 120px;
+        max-width: 90vw;
+        font-size: 1rem;
+        padding: 13px 0;
+        border-radius: 18px;
+        margin: 0 auto;
+        display: block;
+    }
+}

@@ -2265,28 +2265,4 @@ section, .feature, .item, .catalog-item, .service-card {
         text-align: center !important;
         margin-bottom: 18px;
     }
-    .cta .btn {
-        background: #3498db !important;
-        color: #fff !important;
-        border-radius: 6px !important;
-        box-shadow: none !important;
-        width: auto !important;
-        max-width: 100%;
-        margin: 0 auto;
-        display: inline-block;
-    }
-}
-@media (max-width: 600px) {
-    .cta .btn {
-        font-size: 0.8rem !important;
-        padding: 12px 0 !important;
-        min-width: 180px;
-        max-width: 90vw;
-        border-radius: 10px !important;
-        letter-spacing: 0.5px;
-        line-height: 1.2;
-        display: inline-block;
-        margin: 0 auto;
-        box-sizing: border-box;
-    }
 }

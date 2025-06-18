@@ -2365,3 +2365,22 @@ nav ul li a:hover {
         font-size: 1.1rem;
     }
 }
+body {
+    background: #232323;
+    color: #fff;
+    margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: #232323;
+}
+main {
+    padding-top: 80px;
+}
+.product-hero {
+    width: 100%;
+    background: none;
+}

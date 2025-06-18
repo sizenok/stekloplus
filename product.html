@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зеркало в ванную с LED подсветкой | Стекло+</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #181818;
+            color: #fff;
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+        header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: #232323;
+        }
+        main {
+            padding-top: 80px; /* высота шапки + запас */
+        }
+.back-arrow {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    z-index: 1100;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.15s;
+    outline: none;
+    padding: 0;
+    box-shadow: none;
+}
+.back-arrow:hover, .back-arrow:focus {
+    background: none;
+    transform: scale(1.13);
+}
+.back-arrow svg {
+    display: block;
+}
+@media (max-width: 900px) {
+    .back-arrow {
+        top: 12px;
+        left: 12px;
+        width: 40px;
+        height: 40px;
+    }
+    .back-arrow svg {
+        width: 36px;
+        height: 36px;
+    }
+}
+        .product-hero {
+            width: 100%;
+            background: linear-gradient(90deg, #232323 60%, #181818 100%);
+            padding: 40px 0 30px 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 40px;
+            min-height: 70vh;
+        }
+        .product-gallery {
+            flex: 1 1 340px;
+            max-width: 420px;
+            min-width: 240px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+        }
+        .product-main-image {
+            width: 100%;
+            height: 340px;
+            background: #232323;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(52,152,219,0.10);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+        }
+        .product-main-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 18px;
+            transition: box-shadow 0.2s;
+        }
+        .product-thumbs {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .product-thumb {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: border 0.2s;
+            background: #232323;
+        }
+        .product-thumb.active,
+        .product-thumb:hover {
+            border: 2px solid #3498db;
+        }
+        .product-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .product-hero-info {
+            flex: 2 1 340px;
+            max-width: 600px;
+            min-width: 240px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 20px;
+        }
+        .product-hero-info h1 {
+            font-size: 2.1rem;
+            margin-bottom: 18px;
+            color: #fff;
+        }
+        .product-hero-meta {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+        .product-hero-meta .price {
+            color: #4fc3f7;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+        .product-hero-meta .rating {
+            color: #ffd700;
+            font-size: 1.15rem;
+        }
+        .product-hero-desc {
+            color: #bbb;
+            font-size: 1.13rem;
+            margin-bottom: 22px;
+        }
+        .product-hero-specs {
+            color: #eee;
+            font-size: 1.05rem;
+            margin-bottom: 24px;
+            padding-left: 0;
+            list-style: none;
+        }
+        .product-hero-specs li {
+            border-bottom: 1px dashed #333;
+            padding: 7px 0;
+        }
+        .product-hero .btn {
+            background: linear-gradient(90deg, #3498db 60%, #2980b9 100%);
+            color: #fff;
+            border: none;
+            border-radius: 24px;
+            font-size: 1.08rem;
+            font-weight: 600;
+            padding: 14px 0;
+            width: 220px;
+            box-shadow: 0 4px 16px rgba(52,152,219,0.10);
+            transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+            letter-spacing: 0.5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .product-hero .btn:hover {
+            background: linear-gradient(90deg, #2980b9 0%, #3498db 100%);
+            box-shadow: 0 8px 32px rgba(52,152,219,0.18);
+            transform: translateY(-2px) scale(1.03);
+            color: #fff;
+        }
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            top: 0; left: 0; right: 0; bottom: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.98);
+            align-items: center;
+            justify-content: center;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .lightbox img {
+            max-width: 96vw;
+            max-height: 90vh;
+            border-radius: 18px;
+            box-shadow: 0 4px 32px rgba(52,152,219,0.18);
+        }
+        .lightbox-close {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            z-index: 2100;
+            font-size: 2.5rem;
+            color: #fff;
+            opacity: 0.85;
+            background: none;
+            border: none;
+            cursor: pointer;
+            line-height: 1;
+        }
+        @media (max-width: 900px) {
+            .product-hero {
+                flex-direction: column;
+                gap: 24px;
+                padding: 24px 0 18px 0;
+            }
+            .product-gallery, .product-hero-info {
+                max-width: 98vw;
+                min-width: 0;
+            }
+            .product-main-image {
+                height: 180px;
+            }
+            .product-hero-info h1 {
+                font-size: 1.25rem;
+            }
+            .product-hero-desc {
+                font-size: 1.01rem;
+            }
+            .product-hero-specs {
+                font-size: 0.97rem;
+            }
+            .product-hero .btn {
+                width: 100%;
+                font-size: 1.01rem;
+                padding: 13px 0;
+                border-radius: 18px;
+            }
+            .back-arrow {
+                top: 12px;
+                left: 12px;
+                width: 40px;
+                height: 40px;
+            }
+            .back-arrow svg {
+                width: 36px;
+                height: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Ваш header как на других страницах -->
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/стекло без фона.png" alt="Стекло+">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="wholesale.html">Оптовикам</a></li>
+                    <li><a href="delivery.html">Доставка</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="catalog.html" class="active">Каталог</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Стрелка назад -->
+    <a href="catalog.html" class="back-arrow" aria-label="Назад в каталог">
+    <svg viewBox="0 0 40 40" width="40" height="40" fill="none">
+        <circle cx="20" cy="20" r="19" fill="#232323"/>
+        <path d="M23 13L17 20L23 27" stroke="#3498db" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</a>
+
+    <main>
+        <section id="product-section"></section>
+    </main>
+
+    <!-- Лайтбокс для просмотра картинки на весь экран -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Закрыть">&times;</button>
+        <img src="" alt="Фото товара" id="lightboxImg">
+    </div>
+
+    <footer>
+        <!-- Ваш footer как на других страницах -->
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Стекло+</h3>
+                    <p>Профессиональное производство стеклянных изделий и зеркал с 2008 года.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>г. Красноярск, ул. Примерная, 123</p>
+                    <p>+7 (123) 456-78-90</p>
+                    <p>info@steklo-plus.ru</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Часы работы</h3>
+                    <p>Пн-Пт: 9:00 - 18:00</p>
+                    <p>Сб: 10:00 - 15:00</p>
+                    <p>Вс: выходной</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Стекло+. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        
+        const products = [
+        {
+            id: "1",
+            title: "Зеркало в ванную с LED подсветкой",
+            price: "4 500 ₽",
+            rating: "★★★★★",
+            description: "Современное зеркало с влагозащитой и энергосберегающей LED подсветкой. Размеры: 60x80 см.",
+            images: ["images/1_1.jpg", "images/1_2.jpg", "images/1_3.jpg"],
+            specs: [
+                "Материал: Закаленное стекло",
+                "Толщина: 8 мм",
+                "Гарантия: 2 года",
+                "Срок изготовления: 3-5 дней"
+            ]
+        },
+        {
+            id: "2",
+            title: "Круглое зеркало в деревянной раме",
+            price: "3 200 ₽",
+            rating: "★★★★☆",
+            description: "Элегантное круглое зеркало диаметром 70 см в раме из натурального дерева.",
+            images: ["images/2_1.jpg", "images/2_2.jpg"],
+            specs: [
+                "Материал: Стекло, дерево",
+                "Диаметр: 70 см",
+                "Гарантия: 1 год"
+            ]
+        },
+    ];
+    // Получаем id из адреса
+const params = new URLSearchParams(window.location.search);
+const productId = params.get('id');
+const product = products.find(p => p.id === productId);
+
+// Функция для вывода товара
+function renderProduct(product) {
+    if (!product) {
+        document.getElementById('product-section').innerHTML = "<p style='color:#fff;text-align:center;'>Товар не найден.</p>";
+        return;
+    }
+    document.getElementById('product-section').innerHTML = `
+        <section class="product-hero">
+            <div class="product-gallery">
+                <div class="product-main-image" id="mainImage">
+                    <img src="${product.images[0]}" alt="${product.title}" id="currentProductImg">
+                </div>
+                <div class="product-thumbs">
+                    ${product.images.map((img, i) => `
+                        <div class="product-thumb${i === 0 ? ' active' : ''}"><img src="${img}" alt=""></div>
+                    `).join('')}
+                </div>
+            </div>
+            <div class="product-hero-info">
+                <h1>${product.title}</h1>
+                <div class="product-hero-meta">
+                    <span class="price">${product.price}</span>
+                    <span class="rating">${product.rating}</span>
+                </div>
+                <div class="product-hero-desc">${product.description}</div>
+                <ul class="product-hero-specs">
+                    ${product.specs.map(spec => `<li>${spec}</li>`).join('')}
+                </ul>
+            </div>
+        </section>
+    `;
+
+    // Галерея: смена главной картинки по клику на миниатюру
+    const thumbs = document.querySelectorAll('.product-thumb');
+    const mainImg = document.getElementById('currentProductImg');
+    thumbs.forEach(thumb => {
+        thumb.addEventListener('click', function() {
+            thumbs.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+            mainImg.src = this.querySelector('img').src;
+        });
+    });
+
+    // Лайтбокс: открыть картинку на весь экран
+    const mainImageDiv = document.getElementById('mainImage');
+    mainImageDiv.addEventListener('click', function() {
+        lightboxImg.src = mainImg.src;
+        lightbox.classList.add('active');
+    });
+}
+
+// Запуск
+renderProduct(product);
+    </script>
+</body>
+</html>

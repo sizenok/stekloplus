@@ -255,6 +255,21 @@
         }
         categoryFilter.addEventListener('change', filterAndSort);
         sortFilter.addEventListener('change', filterAndSort);
+       const burger = document.querySelector('.burger');
+const nav = document.querySelector('nav');
+if (burger && nav) {
+    burger.addEventListener('click', function() {
+        nav.classList.toggle('nav-open');
+        burger.classList.toggle('active');
+    });
+    // Закрывать меню по клику на пункт (по желанию)
+    nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+            nav.classList.remove('nav-open');
+            burger.classList.remove('active');
+        });
+    });
+}
     </script>
 </body>
 </html>

@@ -2213,3 +2213,112 @@ section, .feature, .item, .catalog-item, .service-card {
     align-items: center;
     text-align: center;
 }
+@media (max-width: 600px) {
+    .back-arrow {
+        top: 61px;
+        left: 12px;
+        width: 56px;
+        height: 56px;
+    }
+    .back-arrow svg {
+        width: 48px;
+        height: 48px;
+    }
+    .product-main-image {
+        height: 260px;
+    }
+    .product-thumb {
+        width: 72px;
+        height: 72px;
+    }
+    .product-hero {
+        gap: 12px;
+        padding: 12px 0 8px 0;
+    }
+    .product-gallery {
+        gap: 8px;
+    }
+    .product-hero-info {
+        padding: 0 6px;
+    }
+}
+.back-arrow {
+    position: fixed;
+    left: 12px;
+    z-index: 1100;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.15s;
+    outline: none;
+    padding: 0;
+    box-shadow: none;
+}
+.back-arrow:hover, .back-arrow:focus {
+    background: none;
+    transform: scale(1.13);
+}
+.back-arrow svg {
+    display: block;
+    width: 48px;
+    height: 48px;
+}
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+    min-height: 64px;
+    padding: 0 16px;
+}
+.logo img {
+    max-height: 48px;
+    width: auto;
+    display: block;
+}
+nav ul {
+    display: flex;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav ul li {
+    margin: 0;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: background 0.2s;
+    font-weight: 500;
+}
+nav ul li a.active,
+nav ul li a:hover {
+    background: rgba(52,152,219,0.10);
+    color: #fff;
+}
+@media (max-width: 900px) {
+    .header-flex {
+        gap: 8px;
+        min-height: 56px;
+        padding: 0 6px;
+    }
+    .logo img {
+        max-height: 36px;
+    }
+    nav ul {
+        gap: 6px;
+    }
+    nav ul li a {
+        padding: 6px 8px;
+        font-size: 0.97rem;
+    }
+}

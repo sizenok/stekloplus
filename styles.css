@@ -2765,5 +2765,5 @@ body.modal-open {
     }
 }
 .product-modal {
-    display: none !important;
+    display: none;
 }

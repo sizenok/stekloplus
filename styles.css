@@ -533,7 +533,6 @@ footer {
     max-width: 900px;
     width: 100%;
     position: relative;
-    display: flex;
     max-height: 90vh;
     overflow: auto;
 }
@@ -2654,7 +2653,6 @@ body.modal-open {
 }
 @media (max-width: 600px) {
     .product-modal {
-        display: flex !important;
         align-items: flex-start !important;
         justify-content: center !important;
         padding: 0 !important;
@@ -2668,7 +2666,6 @@ body.modal-open {
         border-radius: 0 !important;
         padding: 0 0 24px 0 !important;
         background: #181818 !important;
-        display: flex !important;
         flex-direction: column !important;
         overflow-y: auto !important;
         box-sizing: border-box;

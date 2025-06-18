@@ -435,6 +435,24 @@ function renderProduct(product) {
         lightboxImg.src = mainImg.src;
         lightbox.classList.add('active');
     });
+    lightboxClose.addEventListener('click', function() {
+        lightbox.classList.remove('active');
+        lightboxImg.src = '';
+    });
+    // Закрытие по клику вне картинки
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+            lightbox.classList.remove('active');
+            lightboxImg.src = '';
+        }
+    });
+    // Закрытие по ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            lightbox.classList.remove('active');
+            lightboxImg.src = '';
+        }
+    });
 }
 
 // Запуск

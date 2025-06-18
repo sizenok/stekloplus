@@ -290,7 +290,7 @@
 </head>
 <body>
     <header>
-        <div class="container" style="display: flex; align-items: center;">
+    <div class="container header-flex">
         <a href="catalog.html" class="back-arrow" aria-label="Назад в каталог">
             <svg viewBox="0 0 40 40" width="40" height="40" fill="none">
                 <circle cx="20" cy="20" r="19" fill="#232323"/>
@@ -302,34 +302,18 @@
                 <img src="images/стекло без фона.png" alt="Стекло+">
             </a>
         </div>
-        <!-- Ваш header как на других страницах -->
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/стекло без фона.png" alt="Стекло+">
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="services.html">Услуги</a></li>
-                    <li><a href="wholesale.html">Оптовикам</a></li>
-                    <li><a href="delivery.html">Доставка</a></li>
-                    <li><a href="contacts.html">Контакты</a></li>
-                    <li><a href="catalog.html" class="active">Каталог</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Стрелка назад -->
-    <a href="catalog.html" class="back-arrow" aria-label="Назад в каталог">
-    <svg viewBox="0 0 40 40" width="40" height="40" fill="none">
-        <circle cx="20" cy="20" r="19" fill="#232323"/>
-        <path d="M23 13L17 20L23 27" stroke="#3498db" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-</a>
-
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="wholesale.html">Оптовикам</a></li>
+                <li><a href="delivery.html">Доставка</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="catalog.html" class="active">Каталог</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
     <main>
         <section id="product-section"></section>
     </main>
@@ -455,6 +439,18 @@ function renderProduct(product) {
 
 // Запуск
 renderProduct(product);
+function positionBackArrow() {
+    const header = document.querySelector('header');
+    const arrow = document.querySelector('.back-arrow');
+    if (header && arrow) {
+        // Берём высоту шапки и добавляем небольшой отступ (например, 8px)
+        const headerHeight = header.offsetHeight;
+        arrow.style.top = (headerHeight + 8) + 'px';
+    }
+}
+// Срабатывает при загрузке и при изменении размера окна
+window.addEventListener('DOMContentLoaded', positionBackArrow);
+window.addEventListener('resize', positionBackArrow);
     </script>
 </body>
 </html>

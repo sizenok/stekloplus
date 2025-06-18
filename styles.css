@@ -1155,7 +1155,7 @@ border: 2px solid #444;
 
 @media (max-width: 600px) {
     header {
-        background: #1e1e1e;
+        background: #232323;
         border-bottom: 1px solid #333;
     }
     .burger {
@@ -2321,6 +2321,7 @@ nav ul li a:hover {
         padding: 6px 8px;
         font-size: 0.97rem;
     }
+}
 @media (max-width: 900px) {
     .burger {
         display: flex;
@@ -2383,4 +2384,41 @@ main {
 .product-hero {
     width: 100%;
     background: none;
+}
+@media (max-width: 900px) {
+    nav ul li a {
+        background: none !important;
+        color: #fff !important;
+        position: relative;
+        transition: color 0.2s;
+    }
+    nav ul li a.active,
+    nav ul li a:hover {
+        color: #3498db !important;
+    }
+    nav ul li a.active::after,
+    nav ul li a:hover::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        bottom: 8px;
+        height: 3px;
+        border-radius: 2px;
+        background: linear-gradient(90deg, #3498db 60%, #2980b9 100%);
+        transition: all 0.2s;
+    }
+    nav ul li a::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        bottom: 8px;
+        height: 3px;
+        border-radius: 2px;
+        background: transparent;
+        transition: all 0.2s;
+    }
 }

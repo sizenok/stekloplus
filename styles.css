@@ -2321,3 +2321,47 @@ nav ul li a:hover {
         padding: 6px 8px;
         font-size: 0.97rem;
     }
+@media (max-width: 900px) {
+    .burger {
+        display: flex;
+    }
+    nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80vw;
+        max-width: 320px;
+        height: 100vh;
+        background: #232323;
+        box-shadow: -2px 0 16px rgba(0,0,0,0.12);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 80px 24px 24px 24px;
+        z-index: 1100;
+    }
+    nav.nav-open {
+        display: flex;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    nav ul li {
+        width: 100%;
+        margin: 0;
+    }
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 16px 0;
+        border-radius: 0;
+        border-bottom: none;
+        border-top: none;
+        text-align: left;
+        font-size: 1.1rem;
+    }
+}

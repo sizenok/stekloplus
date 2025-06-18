@@ -72,7 +72,7 @@
                             <span class="price">4 500 ₽</span>
                             <span class="rating">★★★★★</span>
                         </div>
-                        <button class="btn" type="button">Подробнее</button>
+                        <a href="product.html?id=1" class="btn">Подробнее</a>
                     </div>
                 </div>
                 <div class="catalog-item" data-category="mirrors" data-price="3200" data-popularity="4">
@@ -86,7 +86,7 @@
                             <span class="price">3 200 ₽</span>
                             <span class="rating">★★★★☆</span>
                         </div>
-                        <button class="btn" type="button">Подробнее</button>
+                        <a href="product.html?id=2" class="btn">Подробнее</a>
                     </div>
                 </div>
                 <!-- Стеклянные изделия -->
@@ -102,7 +102,7 @@
                             <span class="price">8 900 ₽</span>
                             <span class="rating">★★★★★</span>
                         </div>
-                        <button class="btn" type="button">Подробнее</button>
+                        <a href="product.html?id=3" class="btn">Подробнее</a>
                     </div>
                 </div>
                 <div class="catalog-item" data-category="glass" data-price="12500" data-popularity="3">
@@ -116,7 +116,7 @@
                             <span class="price">12 500 ₽</span>
                             <span class="rating">★★★★☆</span>
                         </div>
-                        <button class="btn" type="button">Подробнее</button>
+                        <a href="product.html?id=4" class="btn">Подробнее</a>
                     </div>
                 </div>
                 <!-- Душевые кабины -->
@@ -132,7 +132,7 @@
                             <span class="price">32 400 ₽</span>
                             <span class="rating">★★★★★</span>
                         </div>
-                        <button class="btn" type="button">Подробнее</button>
+                        <a href="product.html?id=5" class="btn">Подробнее</a>
                     </div>
                 </div>
                 <div class="catalog-item" data-category="shower" data-price="28700" data-popularity="4">
@@ -146,7 +146,7 @@
                             <span class="price">28 700 ₽</span>
                             <span class="rating">★★★★☆</span>
                         </div>
-                        <button class="btn" type="button">Подробнее</button>
+                        <a href="product.html?id=6" class="btn">Подробнее</a>
                     </div>
                 </div>
                 <!-- Перегородки -->
@@ -161,7 +161,7 @@
                             <span class="price">45 600 ₽</span>
                             <span class="rating">★★★★★</span>
                         </div>
-                        <button class="btn" type="button">Подробнее</button>
+                        <a href="product.html?id=7" class="btn">Подробнее</a>
                     </div>
                 </div>
                 <div class="catalog-item" data-category="partitions" data-price="38900" data-popularity="4">
@@ -176,7 +176,7 @@
                             <span class="price">38 900 ₽</span>
                             <span class="rating">★★★★☆</span>
                         </div>
-                        <button class="btn" type="button">Подробнее</button>
+                        <a href="product.html?id=8" class="btn">Подробнее</a>
                     </div>
                 </div>
             </div>
@@ -191,41 +191,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Модальное окно товара -->
-    <section class="product-modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="modal-left">
-                <div class="main-image">
-                    <img src="" alt="" id="modal-main-img">
-                </div>
-                <div class="thumbnails">
-                    <img src="" alt="" class="thumbnail active">
-                    <img src="" alt="" class="thumbnail">
-                    <img src="" alt="" class="thumbnail">
-                    <img src="" alt="" class="thumbnail">
-                </div>
-            </div>
-            <div class="modal-right">
-                <h2 id="modal-title"></h2>
-                <div class="price-rating">
-                    <span class="price" id="modal-price"></span>
-                    <span class="rating" id="modal-rating"></span>
-                </div>
-                <p class="description" id="modal-description"></p>
-                <div class="specs">
-                    <h4>Характеристики:</h4>
-                    <ul id="modal-specs"></ul>
-                </div>
-                <div class="actions">
-                    <button class="btn primary">Заказать</button>
-                    <button class="btn secondary">В избранное</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -288,74 +253,8 @@
             catalogGrid.innerHTML = '';
             filteredItems.forEach(item => catalogGrid.appendChild(item));
         }
-
         categoryFilter.addEventListener('change', filterAndSort);
         sortFilter.addEventListener('change', filterAndSort);
-
-        // Модальное окно товара
-        const productModal = document.querySelector('.product-modal');
-        const modalClose = productModal.querySelector('.close');
-        const modalTitle = productModal.querySelector('#modal-title');
-        const modalPrice = productModal.querySelector('#modal-price');
-        const modalRating = productModal.querySelector('#modal-rating');
-        const modalDescription = productModal.querySelector('#modal-description');
-        const modalSpecs = productModal.querySelector('#modal-specs');
-        const modalMainImg = productModal.querySelector('#modal-main-img');
-        const thumbnails = productModal.querySelectorAll('.thumbnail');
-
-        document.querySelectorAll('.catalog-item .btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const item = this.closest('.catalog-item');
-                const title = item.querySelector('h3').textContent;
-                const price = item.querySelector('.price').textContent;
-                const rating = item.querySelector('.rating').textContent;
-                const description = item.querySelector('.item-description').textContent;
-                const imgSrc = item.querySelector('img').src;
-                
-                modalTitle.textContent = title;
-                modalPrice.textContent = price;
-                modalRating.textContent = rating;
-                modalDescription.textContent = description;
-                modalMainImg.src = imgSrc;
-                
-                // Заполняем миниатюры (в реальном проекте нужно брать из данных товара)
-                thumbnails.forEach((thumb, index) => {
-                    thumb.src = imgSrc.replace('.jpg', `-${index+1}.jpg`);
-                });
-                
-                // Заполняем характеристики (пример)
-                modalSpecs.innerHTML = `
-                    <li><strong>Материал:</strong> Закаленное стекло</li>
-                    <li><strong>Толщина:</strong> 8 мм</li>
-                    <li><strong>Гарантия:</strong> 2 года</li>
-                    <li><strong>Срок изготовления:</strong> 3-5 дней</li>
-                `;
-                
-                productModal.style.display = 'flex';
-                document.body.classList.add('modal-open');
-            });
-        });
-
-        modalClose.addEventListener('click', function() {
-            productModal.style.display = 'none';
-            document.body.classList.remove('modal-open');
-        });
-
-        window.addEventListener('click', function(e) {
-            if (e.target === productModal) {
-                productModal.style.display = 'none';
-                document.body.classList.remove('modal-open');
-            }
-        });
-
-        // Переключение миниатюр
-        thumbnails.forEach(thumb => {
-            thumb.addEventListener('click', function() {
-                thumbnails.forEach(t => t.classList.remove('active'));
-                this.classList.add('active');
-                modalMainImg.src = this.src;
-            });
-        });
     </script>
 </body>
 </html>

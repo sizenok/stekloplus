@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Зеркало в ванную с LED подсветкой | Стекло+</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            background: #181818;
+            background: #151515 !important;
             color: #fff;
             margin: 0;
             font-family: 'Montserrat', Arial, sans-serif;
@@ -19,7 +20,7 @@
             background: #232323;
         }
         main {
-            padding-top: 80px; /* высота шапки + запас */
+            padding-top: 120px; /* высота шапки + запас */
         }
 .back-arrow {
     position: fixed;
@@ -83,7 +84,7 @@
 }
         .product-hero {
             width: 100%;
-            background: linear-gradient(90deg, #232323 60%, #181818 100%);
+            
             padding: 12px 0 8px 0;
             display: flex;
             flex-wrap: wrap;
@@ -117,9 +118,10 @@
         .product-main-image img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
-            border-radius: 18px;
+            object-fit: cover;      /* было contain, стало cover */
+            border-radius: 18px;    /* можно убрать, если уже есть у контейнера */
             transition: box-shadow 0.2s;
+            background: #232323;
         }
         .product-thumbs {
             display: flex;
@@ -286,6 +288,7 @@
                 height: 36px;
             }
         }
+        
     </style>
 </head>
 <body>
@@ -330,36 +333,48 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Стекло+</h3>
-                    <p>Профессиональное производство стеклянных изделий и зеркал с 2008 года.</p>
+                    <p>Профессиональная резка и обработка стекла и зеркал с 2013 года.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Контакты</h3>
-                    <p>г. Красноярск, ул. Примерная, 123</p>
-                    <p>+7 (123) 456-78-90</p>
-                    <p>info@steklo-plus.ru</p>
+                    <p>г. Красноярск, ул. Энергетиков 73а стр.19/1</p>
+                    <p>2-611-712</p>
+                    <p>
+    Email: <a href="mailto:Steklo_plus2013@mail.ru">Steklo_plus2013@mail.ru</a><br>
+    TG: <a href="https://t.me/stekloplus24" target="_blank">@stekloplus24</a>
+</p>
                 </div>
                 <div class="footer-section">
                     <h3>Часы работы</h3>
                     <p>Пн-Пт: 9:00 - 18:00</p>
-                    <p>Сб: 10:00 - 15:00</p>
-                    <p>Вс: выходной</p>
+                    <p>Сб-Вс: Выходной</p>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2023 Стекло+. Все права защищены.</p>
-            </div>
         </div>
+        <div class="footer-social">
+    <a href="https://vk.com/steklopluskrsk" target="_blank" aria-label="VK">
+        <i class="fa-brands fa-vk"></i>
+    </a>
+    <a href="https://wa.me/79631911612" target="_blank" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="viber://chat?number=+79631911612" target="_blank" aria-label="Viber">
+        <i class="fa-brands fa-viber"></i>
+    </a>
+    <a href="https://t.me/ZerkalaSteclo24" target="_blank" aria-label="Telegram">
+        <i class="fa-brands fa-telegram"></i>
+    </a>
+</div>
     </footer>
     <script>
         
         const products = [
         {
             id: "1",
-            title: "Зеркало в ванную с LED подсветкой",
+            title: "Зеркало с LED подсветкой",
             price: "4 500 ₽",
-            rating: "★★★★★",
             description: "Современное зеркало с влагозащитой и энергосберегающей LED подсветкой. Размеры: 60x80 см.",
-            images: ["images/1_1.jpg", "images/1_2.jpg", "images/1_3.jpg"],
+            images: ["images/ЗеркалоLED.jpg", "images/Зеркало с подстветкой.jpg", "images/ЗеркалоLED2.jpg"],
             specs: [
                 "Материал: Закаленное стекло",
                 "Толщина: 8 мм",
@@ -369,13 +384,60 @@
         },
         {
             id: "2",
-            title: "Круглое зеркало в деревянной раме",
+            title: "Круглое зеркало в MDF (металической) раме",
             price: "3 200 ₽",
-            rating: "★★★★☆",
-            description: "Элегантное круглое зеркало диаметром 70 см в раме из натурального дерева.",
-            images: ["images/2_1.jpg", "images/2_2.jpg"],
+            description: "Элегантное круглое зеркало диаметром 70 см в металической раме.",
+            images: ["images/Зеркала в МДФ2.jpg", "images/ЗеркалоMDF.jpg","images/ЗеркалоMDF3.jpg"],
             specs: [
-                "Материал: Стекло, дерево",
+                "Материал: Стекло, MDF",
+                "Диаметр: 70 см",
+                "Гарантия: 1 год"
+            ]
+        },
+        {
+            id: "3",
+            title: "Стеклянное лестничное ограждение",
+            price: "8 900 ₽",
+            description: "Ограждение из закаленного стекла толщиной 8 мм с металлическим основанием. Размер: 100x60 см.",
+            images: ["images/.jpg", "images/.jpg", "images/.jpg"],
+            specs: [
+                "Материал: Стекло, MDF",
+                "Диаметр: 70 см",
+                "Гарантия: 1 год"
+            ]
+        },
+        {
+            id: "4",
+            title: "Стеклянные полки",
+            price: "8 900 ₽",
+            description: "Полки из закаленного стекла толщиной 8 мм с металлическими креплениями. Размер: 100x25 см.",
+            images: ["images/.jpg", "images/.jpg", "images/.jpg"],
+            specs: [
+                "Материал: Стекло, MDF",
+                "Диаметр: 70 см",
+                "Гарантия: 1 год"
+            ]
+        },
+        {
+            id: "5",
+            title: "Душевая стеклянная перегородка",
+            price: "8 900 ₽",
+            description: "Кабина из закаленного стекла 8 мм с раздвижными дверями. Размер: 90x90 см.",
+            images: ["images/Душевая перегородка.jpg", "images/Перегородка2.jpg", "images/Перегородка3.jpg"],
+            specs: [
+                "Материал: Стекло, MDF",
+                "Диаметр: 70 см",
+                "Гарантия: 1 год"
+            ]
+        },
+        {
+            id: "6",
+            title: "Зеркала в фитнес зал",
+            price: "8 900 ₽",
+            description: "Зеркала из закаленного стекла 6 мм. Размер: 120x180 см.",
+            images: ["images/Фитнес.jpg", "images/Фитнес2.jpg", "images/Фитнес3.jpg"],
+            specs: [
+                "Материал: Стекло, MDF",
                 "Диаметр: 70 см",
                 "Гарантия: 1 год"
             ]
@@ -408,7 +470,6 @@ function renderProduct(product) {
                 <h1>${product.title}</h1>
                 <div class="product-hero-meta">
                     <span class="price">${product.price}</span>
-                    <span class="rating">${product.rating}</span>
                 </div>
                 <div class="product-hero-desc">${product.description}</div>
                 <ul class="product-hero-specs">

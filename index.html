@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Стекло+ | Производство стекла и зеркал</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
+<body class="index">
+    <header class="header-home">
         <div class="container">
             <div class="logo">
-                <a href="index.html">
-                    <img src="images/стекло без фона.png" alt="Стекло+">
-                </a>
-            </div>
-            <button class="burger" aria-label="Открыть меню">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+    <a href="index.html">
+        <img src="images/стекло без фона.png" alt="Стекло+">
+    </a>
+</div>
             <nav>
                 <ul>
                     <li><a href="index.html">Главная</a></li>
@@ -27,37 +23,40 @@
                     <li><a href="wholesale.html">Оптовикам</a></li>
                     <li><a href="delivery.html">Доставка</a></li>
                     <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero" id="home">
+    <section class="hero-features-bg">
+        <section class="hero" id="home">
         <div class="container">
-            <h1>Профессиональное производство стекла и зеркал</h1>
-            <p class="hero-subtitle">Качественные решения для вашего дома и бизнеса</p>
+            <h1>Профессиональная резка и обработка стекла и зеркал</h1>
+            <p>Качественные решения для вашего дома и бизнеса</p>
             <a href="catalog.html" class="btn">Посмотреть каталог</a>
         </div>
-    </section>
+        </section>
 
-    <section class="features">
-        <div class="container">
-            <div class="feature">
-                <div class="icon">✓</div>
-                <h3>Высокое качество</h3>
-                <p>Используем только проверенные материалы</p>
+        <section class="features">
+            <div class="container">
+                <div class="feature">
+                    <div class="icon">✓</div>
+                    <h3>Высокое качество</h3>
+                    <p>Используем только проверенные материалы</p>
+                </div>
+                <div class="feature">
+                    <div class="icon">⚡</div>
+                    <h3>Быстрая работа</h3>
+                    <p>Срок изготовления от 1 дня</p>
+                </div>
+                <div class="feature">
+                    <div class="icon">🏆</div>
+                    <h3>Опыт 12+ лет</h3>
+                    <p>Тысячи довольных клиентов</p>
+                </div>
             </div>
-            <div class="feature">
-                <div class="icon">⚡</div>
-                <h3>Быстрая работа</h3>
-                <p>Срок изготовления от 1 дня</p>
-            </div>
-            <div class="feature">
-                <div class="icon">🏆</div>
-                <h3>Опыт 15+ лет</h3>
-                <p>Тысячи довольных клиентов</p>
-            </div>
-        </div>
+        </section>
     </section>
 
     <section class="catalog" id="catalog">
@@ -65,28 +64,28 @@
             <h2>Наши работы</h2>
             <div class="gallery">
                 <div class="item">
-                    <img src="images/1_1.jpg" alt="Зеркальное полотно">
+                    <img src="images/Зеркала в МДФ2.jpg" alt="Зеркала в МДФ">
                     <div class="overlay">
-                        <h3>Зеркальное полотно</h3>
+                        <h3>Зеркала в МДФ</h3>
                         <button class="view-btn">Посмотреть</button>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="images/2_1.jpg" alt="Тонированное стекло">
+                    <img src="images/Душевая перегородка.jpg" alt="Душевая перегородка">
                     <div class="overlay">
-                        <h3>Тонированное стекло</h3>
+                        <h3>Душевая перегородка</h3>
                         <button class="view-btn">Посмотреть</button>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="images/3_1 (1).jpg" alt="Армированное стекло">
+                    <img src="images/Межкомнатные перегородки.jpg" alt="Межкомнатные перегородки">
                     <div class="overlay">
-                        <h3>Армированное стекло</h3>
+                        <h3>Межкомнатные перегородки</h3>
                         <button class="view-btn">Посмотреть</button>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="images/4_1.jpg" alt="Матовое стекло">
+                    <img src="images/Зеркало с подстветкой.jpg" alt="Зеркало с подстветкой">
                     <div class="overlay">
                         <h3>Матовое стекло</h3>
                         <button class="view-btn">Посмотреть</button>
@@ -107,54 +106,70 @@
     <section class="cta">
         <div class="container">
             <h2>Готовы обсудить ваш проект?</h2>
-            <p>Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
-            <button class="btn">Оставить заявку</button>
+            <p>Свяжитесь с нами!</p>
+            <button class="btn" id="openContactsModal">Наши контакты</button>
         </div>
     </section>
+    <!-- Модальное окно для контактов -->
+<div class="modal contacts-modal" id="contactsModal" style="display:none;">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="contacts-modal-body">
+    <p>Номер: <a href="tel: 2-611-712">2-611-712</a></p>
+    <p>Email: <a href="mailto:Steklo_plus2013@mail.ru">Steklo_plus2013@mail.ru</a></p>
+    <p>Telegram: <a href="https://t.me/stekloplus24" target="_blank">@stekloplus24</a></p>
+    <div class="contacts-social">
+        <a href="https://wa.me/79631911612" target="_blank" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="viber://chat?number=+79631911612" target="_blank" aria-label="Viber">
+            <i class="fa-brands fa-viber"></i>
+        </a>
+    </div>
+</div>
+    </div>
+</div>
 
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Стекло+</h3>
-                    <p>Профессиональное производство стеклянных изделий и зеркал с 2008 года.</p>
+                    <p>Профессиональная резка и обработка стекла и зеркал с 2013 года.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Контакты</h3>
-                    <p>г. Ваш город, ул. Примерная, 123</p>
-                    <p>+7 (123) 456-78-90</p>
-                    <p>info@steklo-plus.ru</p>
+                    <p>г. Красноярск, ул. Энергетиков 73а стр.19/1</p>
+                    <p><a href="tel: 2-611-712">2-611-712</a></p>
+                    <p>
+    Email: <a href="mailto:Steklo_plus2013@mail.ru">Steklo_plus2013@mail.ru</a><br>
+    TG: <a href="https://t.me/stekloplus24" target="_blank">@stekloplus24</a>
+</p>
                 </div>
                 <div class="footer-section">
                     <h3>Часы работы</h3>
                     <p>Пн-Пт: 9:00 - 18:00</p>
-                    <p>Сб: 10:00 - 15:00</p>
-                    <p>Вс: выходной</p>
+                    <p>Сб-Вс: Выходной</p>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2023 Стекло+. Все права защищены.</p>
-            </div>
         </div>
+        <div class="footer-social">
+    <a href="https://vk.com/steklopluskrsk" target="_blank" aria-label="VK">
+        <i class="fa-brands fa-vk"></i>
+    </a>
+    <a href="https://wa.me/79631911612" target="_blank" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="viber://chat?number=+79631911612" target="_blank" aria-label="Viber">
+        <i class="fa-brands fa-viber"></i>
+    </a>
+    <a href="https://t.me/ZerkalaSteclo24" target="_blank" aria-label="Telegram">
+        <i class="fa-brands fa-telegram"></i>
+    </a>
+</div>
     </footer>
 
     <script>
-        // Бургер-меню
-        const burger = document.querySelector('.burger');
-        const nav = document.querySelector('nav');
-        burger.addEventListener('click', function() {
-            nav.classList.toggle('open');
-            burger.classList.toggle('active');
-        });
-
-        // Закрытие меню при клике по пункту
-        document.querySelectorAll('nav ul li a').forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('open');
-                burger.classList.remove('active');
-            });
-        });
-
         // Модальное окно для галереи
         const items = document.querySelectorAll('.item');
         const modal = document.querySelector('.modal');
@@ -166,38 +181,47 @@
             item.addEventListener('click', function() {
                 const imgSrc = this.querySelector('img').src;
                 const title = this.querySelector('h3').textContent;
+                
                 modalImg.src = imgSrc;
                 modalTitle.textContent = title;
                 modal.style.display = 'flex';
             });
         });
 
-        // Закрытие модального окна по крестику
         closeBtn.addEventListener('click', function() {
             modal.style.display = 'none';
         });
 
-        // Закрытие модального окна по клику вне изображения и заголовка
-        if (modal) {
-            modal.addEventListener('click', function(e) {
-                if (
-                    !e.target.classList.contains('modal-image') &&
-                    !e.target.classList.contains('modal-title')
-                ) {
-                    modal.style.display = 'none';
-                }
-            });
-        }
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
 
         // Плавная прокрутка для навигации
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
+                
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
             });
         });
+    // Открытие модального окна контактов
+    document.getElementById('openContactsModal').onclick = function() {
+        document.getElementById('contactsModal').style.display = 'flex';
+    };
+    // Закрытие по крестику
+    document.querySelector('#contactsModal .close').onclick = function() {
+        document.getElementById('contactsModal').style.display = 'none';
+    };
+    // Закрытие по клику вне окна
+    document.getElementById('contactsModal').addEventListener('mousedown', function(e) {
+        if (e.target === this) {
+            this.style.display = 'none';
+        }
+    });
     </script>
 </body>
 </html>

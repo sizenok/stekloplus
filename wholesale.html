@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Оптовикам | Стекло+</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
@@ -15,11 +16,6 @@
         <img src="images/стекло без фона.png" alt="Стекло+">
     </a>
 </div>
-<button class="burger" aria-label="Открыть меню">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
             <nav>
                 <ul>
                     <li><a href="index.html">Главная</a></li>
@@ -37,53 +33,84 @@
         <div class="container">
             <h1>Оптовым покупателям</h1>
             <div class="wholesale-content">
-                <p>Компания "Стекло+" предлагает Вам рассмотреть взаимовыгодные условия сотрудничества. Для этого позвоните нам по телефону <strong>+7 (391) 271-16-12</strong>, либо закажите обратный звонок.</p>
-                <button class="btn">Заказать звонок</button>
+                <p>Компания "Стекло+" предлагает вам рассмотреть взаимовыгодные условия сотрудничества. Для этого позвоните нам по телефону <strong>+7 (391) 271-16-12</strong>, либо закажите обратный звонок.
+                    <br>Для оптовых покупателей действует гибкая система скидок</p>
+                <button class="btn btn-large" id="openContactsModal">Наши контакты</button>
             </div>
         </div>
     </section>
-
+<!-- Модальное окно для контактов -->
+<div class="modal contacts-modal" id="contactsModal" style="display:none;">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="contacts-modal-body">
+    <p>Номер: <a href="tel: 2-611-712">2-611-712</a></p>
+    <p>Email: <a href="mailto:Steklo_plus2013@mail.ru">Steklo_plus2013@mail.ru</a></p>
+    <p>Telegram: <a href="https://t.me/stekloplus24" target="_blank">@stekloplus24</a></p>
+    <div class="contacts-social">
+        <a href="https://wa.me/79631911612" target="_blank" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="viber://chat?number=+79631911612" target="_blank" aria-label="Viber">
+            <i class="fa-brands fa-viber"></i>
+        </a>
+    </div>
+</div>
+    </div>
+</div>
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Стекло+</h3>
-                    <p>Профессиональное производство стеклянных изделий и зеркал с 2008 года.</p>
+                    <p>Профессиональная резка и обработка стекла и зеркал с 2013 года.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Контакты</h3>
-                    <p>г. Красноярск, ул. Кутузова, 1 ст9</p>
-                    <p>+7 (391) 271-16-12</p>
-                    <p>steklo_plus2013@mail.ru</p>
+                    <p>г. Красноярск, ул. Энергетиков 73а стр.19/1</p>
+                    <p>2-611-712</p>
+                    <p>
+    Email: <a href="mailto:Steklo_plus2013@mail.ru">Steklo_plus2013@mail.ru</a><br>
+    TG: <a href="https://t.me/stekloplus24" target="_blank">@stekloplus24</a>
+</p>
                 </div>
                 <div class="footer-section">
                     <h3>Часы работы</h3>
                     <p>Пн-Пт: 9:00 - 18:00</p>
-                    <p>Сб: 10:00 - 15:00</p>
-                    <p>Вс: выходной</p>
+                    <p>Сб-Вс: Выходной</p>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2023 Стекло+. Все права защищены.</p>
-            </div>
         </div>
+        <div class="footer-social">
+    <a href="https://vk.com/steklopluskrsk" target="_blank" aria-label="VK">
+        <i class="fa-brands fa-vk"></i>
+    </a>
+    <a href="https://wa.me/79631911612" target="_blank" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="viber://chat?number=+79631911612" target="_blank" aria-label="Viber">
+        <i class="fa-brands fa-viber"></i>
+    </a>
+    <a href="https://t.me/ZerkalaSteclo24" target="_blank" aria-label="Telegram">
+        <i class="fa-brands fa-telegram"></i>
+    </a>
+</div>
     </footer>
     <script>
-        const burger = document.querySelector('.burger');
-        const nav = document.querySelector('nav');
-        if (burger && nav) {
-            burger.addEventListener('click', function() {
-                nav.classList.toggle('open');
-                burger.classList.toggle('active');
-        });
-
-        document.querySelectorAll('nav ul li a').forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('open');
-                burger.classList.remove('active');
-            });
-        });
-    }
+     // Открытие модального окна контактов
+    document.getElementById('openContactsModal').onclick = function() {
+        document.getElementById('contactsModal').style.display = 'flex';
+    };
+    // Закрытие по крестику
+    document.querySelector('#contactsModal .close').onclick = function() {
+        document.getElementById('contactsModal').style.display = 'none';
+    };
+    // Закрытие по клику вне окна
+    document.getElementById('contactsModal').addEventListener('mousedown', function(e) {
+        if (e.target === this) {
+            this.style.display = 'none';
+        }
+    });
     </script>
 </body>
 </html>

@@ -338,7 +338,7 @@
                 <div class="footer-section">
                     <h3>Контакты</h3>
                     <p>г. Красноярск, ул. Энергетиков 73а стр.19/1</p>
-                    <p>2-611-712</p>
+                    <p>2-711-612</p>
                     <p>
     Email: <a href="mailto:Steklo_plus2013@mail.ru">Steklo_plus2013@mail.ru</a><br>
     TG: <a href="https://t.me/stekloplus24" target="_blank">@stekloplus24</a>
@@ -366,6 +366,25 @@
     </a>
 </div>
     </footer>
+ <!-- Модальное окно для контактов -->
+<div class="modal contacts-modal" id="contactsModal" style="display:none;">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="contacts-modal-body">
+    <p>Номер: <a href="tel: 2-711-612">2-711-612</a></p>
+    <p>Email: <a href="mailto:Steklo_plus2013@mail.ru">Steklo_plus2013@mail.ru</a></p>
+    <p>Telegram: <a href="https://t.me/stekloplus24" target="_blank">@stekloplus24</a></p>
+    <div class="contacts-social">
+        <a href="https://wa.me/79631911612" target="_blank" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="viber://chat?number=+79631911612" target="_blank" aria-label="Viber">
+            <i class="fa-brands fa-viber"></i>
+        </a>
+    </div>
+</div>
+    </div>
+</div>
     <script>
         
         const products = [
@@ -467,15 +486,18 @@ function renderProduct(product) {
                 </div>
             </div>
             <div class="product-hero-info">
-                <h1>${product.title}</h1>
-                <div class="product-hero-meta">
-                    <span class="price">${product.price}</span>
-                </div>
-                <div class="product-hero-desc">${product.description}</div>
-                <ul class="product-hero-specs">
-                    ${product.specs.map(spec => `<li>${spec}</li>`).join('')}
-                </ul>
-            </div>
+    <h1>${product.title}</h1>
+    <div class="product-hero-meta">
+        <span class="price">${product.price}</span>
+    </div>
+    <div class="product-hero-desc">${product.description}</div>
+    <ul class="product-hero-specs">
+        ${product.specs.map(spec => `<li>${spec}</li>`).join('')}
+    </ul>
+    <button class="btn" id="openContactsModal" style="margin-top:15px; border-radius:9px; height:42px; width:180px;">
+    Наши контакты
+    </button>
+</div>
         </section>
     `;
 
@@ -530,6 +552,20 @@ function positionBackArrow() {
 // Срабатывает при загрузке и при изменении размера окна
 window.addEventListener('DOMContentLoaded', positionBackArrow);
 window.addEventListener('resize', positionBackArrow);
+  // Открытие модального окна контактов
+    document.getElementById('openContactsModal').onclick = function() {
+        document.getElementById('contactsModal').style.display = 'flex';
+    };
+    // Закрытие по крестику
+    document.querySelector('#contactsModal .close').onclick = function() {
+        document.getElementById('contactsModal').style.display = 'none';
+    };
+    // Закрытие по клику вне окна
+    document.getElementById('contactsModal').addEventListener('mousedown', function(e) {
+        if (e.target === this) {
+            this.style.display = 'none';
+        }
+    });
     </script>
 </body>
 </html>

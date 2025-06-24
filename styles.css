@@ -2443,12 +2443,12 @@ nav ul li a:hover {
 }
 a {
     color: #3498db;
-    text-decoration: underline;
+    text-decoration: underline; 
     transition: color 0.2s;
 }
 a:hover {
     color: #217dbb;
-    text-decoration: underline;
+    text-decoration: none;
 }
 .features {
     padding: 70px 0 60px 0 !important;
@@ -2542,32 +2542,12 @@ body.index {
     transition: color 0.2s;
     word-break: break-all;
 }
-
-.contacts-modal .contacts-modal-body a:hover {
-    color: #217dbb;
-    text-decoration: underline;
-}
-
 .contacts-modal .contacts-social {
     margin-top: 18px;
     display: flex;
     justify-content: center;
     gap: 18px;
 }
-
-.contacts-modal .contacts-social a {
-    color: #fff;
-    font-size: 1.7rem;
-    background: #232323;
-    border-radius: 50%;
-    width: 38px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: color 0.2s, background 0.2s, transform 0.2s;
-}
-
 .contacts-modal .contacts-social a:hover {
     color: #25d366;
     background: #181818;
@@ -2713,4 +2693,132 @@ body.index {
     border-radius: 16px !important;
     display: block !important;
     margin: 0 auto !important;
+}
+.contacts-modal .modal-content {
+    background: #18191c;
+    color: #fff;
+    border-radius: 12px;
+    padding: 28px 20px 22px 20px;
+    min-width: 0;
+    max-width: 340px;
+    width: 94vw;
+    box-shadow: 0 8px 32px #000a, 0 1.5px 8px #2224;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none !important; /* убирает рамку */
+    /* "Острота" — чуть меньше скругление, контрастная рамка */
+}
+
+.contacts-modal .close {
+    position: absolute;
+    right: 14px;
+    top: 10px;
+    font-size: 1.7rem;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.2s;
+    border-radius: 6px;
+    padding: 2px 8px;
+}
+.contacts-modal .close:hover {
+    color: #fff;
+    background: #232323;
+}
+
+.contacts-modal .contacts-modal-body p {
+    margin: 10px 0 0 0;
+    font-size: 1.05rem;
+    color: #e0e0e0;
+    word-break: break-all;
+}
+.contacts-modal .contacts-modal-body p:first-child {
+    font-size: 1.18rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.contacts-modal .contacts-modal-body a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.2s;
+    word-break: break-all;
+}
+.contacts-modal .contacts-modal-body a:hover {
+    color: #217dbb;
+    text-decoration: none;
+}
+
+.contacts-modal .contacts-social {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.contacts-modal .contacts-social a {
+    color: #fff;
+    font-size: 2.2rem;
+    background: #232323;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s, background 0.2s, transform 0.2s;
+    text-decoration: none !important;
+    box-shadow: 0 2px 8px #3498db22;
+    border: none !important;
+}
+.contacts-modal .contacts-social a:hover {
+    color: #25d366;
+    background: #181818;
+    transform: scale(1.13);
+    text-decoration: none !important;
+    border: none !important;
+}
+.contacts-modal .contacts-social a[aria-label="Viber"]:hover {
+    color: #7360f2;
+}
+
+@media (max-width: 600px) {
+    .contacts-modal .modal-content {
+        padding: 12px 4vw 12px 4vw;
+        max-width: 98vw;
+    }
+    .contacts-modal .contacts-social a {
+        font-size: 1.3rem;
+        width: 32px;
+        height: 32px;
+    }
+}
+.contacts-modal .contacts-social a {
+    color: #fff;
+    font-size: 2.2rem;
+    background: none; /* было #232323 */
+    border-radius: 0; /* было 50% */
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s, background 0.2s, transform 0.2s;
+    text-decoration: none !important;
+    box-shadow: none;
+    border: none !important;
+}
+.contacts-modal .contacts-social a:hover {
+    color: #25d366;
+    background: none;
+    transform: scale(1.13);
+    text-decoration: none !important;
+    border: none !important;
+}
+.contacts-modal .contacts-social a[aria-label="Viber"]:hover {
+    color: #7360f2;
 }

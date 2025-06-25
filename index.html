@@ -9,25 +9,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body class="index">
-    <header class="header-home">
-        <div class="container">
-            <div class="logo">
-    <a href="index.html">
-        <img src="images/стекло без фона.png" alt="Стекло+">
-    </a>
-</div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="services.html">Услуги</a></li>
-                    <li><a href="wholesale.html">Оптовикам</a></li>
-                    <li><a href="delivery.html">Доставка</a></li>
-                    <li><a href="contacts.html">Контакты</a></li>
-                    <li><a href="catalog.html">Каталог</a></li>
-                </ul>
-            </nav>
+<header class="header-home">
+    <div class="container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/стекло без фона.png" alt="Стекло+">
+            </a>
         </div>
-    </header>
+        <button class="burger" id="burgerMenu" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="wholesale.html">Оптовикам</a></li>
+                <li><a href="delivery.html">Доставка</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
     <section class="hero-features-bg">
         <section class="hero" id="home">
@@ -219,6 +224,13 @@
             this.style.display = 'none';
         }
     });
+    const burger = document.getElementById('burgerMenu');
+const nav = document.querySelector('nav');
+
+burger.addEventListener('click', function() {
+    burger.classList.toggle('active');
+    nav.classList.toggle('open');
+});
     </script>
 </body>
 </html>

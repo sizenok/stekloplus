@@ -2836,31 +2836,6 @@ footer a:hover,
 footer a:active {
     text-decoration: none !important;
 }
-.hero,
-.features {
-    background: url('images/proizvodgpt.png') center center/cover no-repeat !important;
-    background-color: #232323 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-}
-@media (max-width: 600px) {
-    .hero,
-    .features {
-        background: url('images/proizvodgpt.png') center center/cover no-repeat !important;
-        background-color: #232323 !important;
-        border-radius: 0 !important;
-        box-shadow: none !important;
-        margin: 0 !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-    .hero h1,
-    .hero .btn {
-        background: none !important;
-        border-radius: 0 !important;
-        box-shadow: none !important;
-    }
-}
 .hero .container {
     background: none !important;
     box-shadow: none !important;

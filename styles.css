@@ -2833,6 +2833,11 @@ footer a:active {
     text-decoration: none !important;
 }
 @media (max-width: 600px) {
+    .logo {
+        margin-left: 16px !important;
+    }
+}
+@media (max-width: 600px) {
     .item {
         height: 80px !important;
         min-height: 80px !important;
@@ -2840,5 +2845,17 @@ footer a:active {
     }
     .item img {
         height: 100% !important;
+    }
+}
+@media (max-width: 600px) {
+    .gallery .item {
+        height: 250px !important;
+        min-height: 250px !important;
+        max-height: 250px !important;
+    }
+    .gallery .item img {
+        height: 100% !important;
+        max-height: 250px !important;
+        object-fit: cover !important;
     }
 }

@@ -2836,7 +2836,3 @@ footer a:hover,
 footer a:active {
     text-decoration: none !important;
 }
-.hero .container {
-    background: none !important;
-    box-shadow: none !important;
-}

@@ -614,7 +614,7 @@ footer {
     top: 30px;
     left: 30px;
     background-color: rgba(250, 250, 250, 0.95);
-    padding: 30px;
+    padding: 15px;
     border-radius: 8px;
     max-width: 300px;
 }
@@ -631,7 +631,7 @@ footer {
 }
 
 .contacts-overlay strong {
-    color: #2c3e50;
+    color: #3498db;
 }
 
 @media (max-width: 768px) {
@@ -2922,4 +2922,19 @@ footer a:active {
         display: block;
         object-fit: contain !important;
     }
+}
+.contacts-social a {
+    color: #fff;
+    font-size: 2.2rem;
+    background: none; /* было #232323 */
+    border-radius: 0; /* было 50% */
+    width: auto;
+    height: auto;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s, background 0.2s, transform 0.2s;
+    text-decoration: none !important;
+    box-shadow: none;
+    border: none !important;
 }

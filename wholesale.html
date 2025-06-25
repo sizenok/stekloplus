@@ -16,19 +16,23 @@
         <img src="images/стекло без фона.png" alt="Стекло+">
     </a>
 </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="services.html">Услуги</a></li>
-                    <li><a href="wholesale.html" class="active">Оптовикам</a></li>
-                    <li><a href="delivery.html">Доставка</a></li>
-                    <li><a href="contacts.html">Контакты</a></li>
-                    <li><a href="catalog.html">Каталог</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
+        <button class="burger" id="burgerMenu" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="wholesale.html">Оптовикам</a></li>
+                <li><a href="delivery.html">Доставка</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
     <section class="wholesale-page">
         <div class="container">
             <h1>Оптовым покупателям</h1>
@@ -50,9 +54,6 @@
     <div class="contacts-social">
         <a href="https://wa.me/79631911612" target="_blank" aria-label="WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
-        </a>
-        <a href="viber://chat?number=+79631911612" target="_blank" aria-label="Viber">
-            <i class="fa-brands fa-viber"></i>
         </a>
     </div>
 </div>
@@ -108,6 +109,13 @@
             this.style.display = 'none';
         }
     });
+        const burger = document.getElementById('burgerMenu');
+const nav = document.querySelector('nav');
+
+burger.addEventListener('click', function() {
+    burger.classList.toggle('active');
+    nav.classList.toggle('open');
+});
     </script>
 </body>
 </html>

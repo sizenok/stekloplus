@@ -584,10 +584,15 @@ footer {
 }
 
 .delivery-content img {
-    max-width: 100%;
+    max-width: 320px;
+    width: 100%;
+    height: auto;
     border-radius: 8px;
     margin-bottom: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Стили для страницы контактов */
@@ -2404,20 +2409,20 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     gap: 22px;
-    margin: 0 auto 0 auto;
-    padding: 18px 0 0 0;
+    margin: 8px 0 0 0;
+    padding:0;
 }
 
 .footer-social a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background: #232323;
     color: #fff;
-    font-size: 1.7rem;
+    font-size: 1.9rem;
     transition: background 0.2s, color 0.2s, transform 0.18s;
     box-shadow: 0 2px 8px rgba(52,152,219,0.08);
     text-decoration: none;
@@ -2821,4 +2826,13 @@ body.index {
 }
 .contacts-modal .contacts-social a[aria-label="Viber"]:hover {
     color: #7360f2;
+}
+.product-hero-desc {
+    white-space: pre-line;
+}
+footer a,
+footer a:visited,
+footer a:hover,
+footer a:active {
+    text-decoration: none !important;
 }
